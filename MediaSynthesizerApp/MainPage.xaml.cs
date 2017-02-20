@@ -26,5 +26,18 @@ namespace MediaSynthesizerApp
         {
             this.InitializeComponent();
         }
+
+        private async void button_Click(object sender, RoutedEventArgs e)
+        {
+            string name = textBox.Text;
+            string greeting = String.Format("Hello {0} !", name);
+            MediaElement mediaElement = new MediaElement();
+            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+            Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(greeting);
+            mediaElement.SetSource(stream, stream.ContentType);
+            mediaElement.Play();
+
+
+        }
     }
 }

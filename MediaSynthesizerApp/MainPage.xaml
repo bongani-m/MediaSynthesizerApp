@@ -8,6 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Header="Name" PlaceholderText="Type Name.." Margin="0,222,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="350"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="99,157,0,0" TextWrapping="Wrap" Text="Media SynThesizer App" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Say Name!" HorizontalAlignment="Left" Margin="0,287,0,0" VerticalAlignment="Top" Width="346" Click="button_Click"/>
 
     </Grid>
 </Page>
